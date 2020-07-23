@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.topPanel = new System.Windows.Forms.Panel();
+            this.closeButton = new Stoppuhr.CloseButton();
+            this.maxButton = new Stoppuhr.MaximizeButton();
+            this.minButton = new Stoppuhr.MinimizeButton();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.txtWorkType = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
@@ -42,9 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.timeButton = new Stoppuhr.RoundButton();
-            this.closeButton = new Stoppuhr.CloseButton();
-            this.maxButton = new Stoppuhr.MaximizeButton();
-            this.minButton = new Stoppuhr.MinimizeButton();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,63 @@
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseDown);
             this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseMove);
             this.topPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.topPanel_MouseUp);
+            // 
+            // closeButton
+            // 
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.ClickColor = System.Drawing.Color.Black;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.HoverColor = System.Drawing.Color.LightGray;
+            this.closeButton.Location = new System.Drawing.Point(275, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(29, 28);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.Text = "X";
+            this.closeButton.TextLocationX = 3;
+            this.closeButton.TextLocationY = -3;
+            this.closeButton.TmpColor = System.Drawing.Color.Empty;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // maxButton
+            // 
+            this.maxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.maxButton.ClickColor = System.Drawing.Color.Black;
+            this.maxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.maxButton.ForeColor = System.Drawing.Color.White;
+            this.maxButton.formState = Stoppuhr.MaximizeButton.CustomFormState.Normal;
+            this.maxButton.HoverColor = System.Drawing.Color.LightGray;
+            this.maxButton.Location = new System.Drawing.Point(240, 0);
+            this.maxButton.Name = "maxButton";
+            this.maxButton.Size = new System.Drawing.Size(29, 28);
+            this.maxButton.TabIndex = 1;
+            this.maxButton.Text = "_";
+            this.maxButton.TextLocationX = 7;
+            this.maxButton.TextLocationY = 10;
+            this.maxButton.TmpColor = System.Drawing.Color.Empty;
+            this.maxButton.UseVisualStyleBackColor = true;
+            this.maxButton.Click += new System.EventHandler(this.maxButton_Click);
+            // 
+            // minButton
+            // 
+            this.minButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.minButton.ClickColor = System.Drawing.Color.Black;
+            this.minButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minButton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minButton.ForeColor = System.Drawing.Color.White;
+            this.minButton.HoverColor = System.Drawing.Color.LightGray;
+            this.minButton.Location = new System.Drawing.Point(205, 0);
+            this.minButton.Name = "minButton";
+            this.minButton.Size = new System.Drawing.Size(29, 28);
+            this.minButton.TabIndex = 2;
+            this.minButton.Text = "_";
+            this.minButton.TextLocationX = 3;
+            this.minButton.TextLocationY = -8;
+            this.minButton.TmpColor = System.Drawing.Color.Empty;
+            this.minButton.UseVisualStyleBackColor = true;
+            this.minButton.Click += new System.EventHandler(this.minButton_Click);
             // 
             // timer
             // 
@@ -157,7 +214,7 @@
             // buttonSettings
             // 
             this.buttonSettings.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSettings.BackgroundImage")));
+            this.buttonSettings.BackgroundImage = global::Stoppuhr.Properties.Resources.Settings;
             this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSettings.FlatAppearance.BorderSize = 0;
             this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -187,60 +244,6 @@
             this.timeButton.Text = "00:00:00";
             this.timeButton.UseVisualStyleBackColor = false;
             this.timeButton.Click += new System.EventHandler(this.roundButton1_Click);
-            // 
-            // closeButton
-            // 
-            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.ClickColor = System.Drawing.Color.Black;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.HoverColor = System.Drawing.Color.LightGray;
-            this.closeButton.Location = new System.Drawing.Point(275, 0);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(29, 28);
-            this.closeButton.TabIndex = 3;
-            this.closeButton.TextLocationX = 3;
-            this.closeButton.TextLocationY = -3;
-            this.closeButton.TmpColor = System.Drawing.Color.Empty;
-            this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            // 
-            // maxButton
-            // 
-            this.maxButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.maxButton.ClickColor = System.Drawing.Color.Black;
-            this.maxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.maxButton.ForeColor = System.Drawing.Color.White;
-            this.maxButton.formState = Stoppuhr.MaximizeButton.CustomFormState.Normal;
-            this.maxButton.HoverColor = System.Drawing.Color.LightGray;
-            this.maxButton.Location = new System.Drawing.Point(240, 0);
-            this.maxButton.Name = "maxButton";
-            this.maxButton.Size = new System.Drawing.Size(29, 28);
-            this.maxButton.TabIndex = 1;
-            this.maxButton.TextLocationX = 7;
-            this.maxButton.TextLocationY = 10;
-            this.maxButton.TmpColor = System.Drawing.Color.Empty;
-            this.maxButton.UseVisualStyleBackColor = true;
-            this.maxButton.Click += new System.EventHandler(this.maxButton_Click);
-            // 
-            // minButton
-            // 
-            this.minButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.minButton.ClickColor = System.Drawing.Color.Black;
-            this.minButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minButton.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minButton.ForeColor = System.Drawing.Color.White;
-            this.minButton.HoverColor = System.Drawing.Color.LightGray;
-            this.minButton.Location = new System.Drawing.Point(205, 0);
-            this.minButton.Name = "minButton";
-            this.minButton.Size = new System.Drawing.Size(29, 28);
-            this.minButton.TabIndex = 2;
-            this.minButton.TextLocationX = 3;
-            this.minButton.TextLocationY = -8;
-            this.minButton.TmpColor = System.Drawing.Color.Empty;
-            this.minButton.UseVisualStyleBackColor = true;
-            this.minButton.Click += new System.EventHandler(this.minButton_Click);
             // 
             // MainForm
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.lblHeading = new System.Windows.Forms.Label();
             this.btnSaveSettings = new System.Windows.Forms.Button();
             this.btnCancelSettings = new System.Windows.Forms.Button();
@@ -94,8 +95,10 @@
             this.Controls.Add(this.btnCancelSettings);
             this.Controls.Add(this.btnSaveSettings);
             this.Controls.Add(this.lblHeading);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
+            this.ShowInTaskbar = false;
             this.Text = "Einstellungen";
             this.Load += new System.EventHandler(this.settingsForm_Load);
             this.ResumeLayout(false);
