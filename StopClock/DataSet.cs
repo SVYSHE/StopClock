@@ -1,4 +1,4 @@
-﻿namespace Stoppuhr
+﻿namespace StopClock
 {
     public class DataSet
     {

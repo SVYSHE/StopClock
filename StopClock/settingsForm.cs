@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Stoppuhr
+namespace StopClock
 {
     public partial class SettingsForm : Form
     {

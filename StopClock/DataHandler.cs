@@ -3,19 +3,19 @@ using System.Windows.Forms;
 using System;
 using System.IO;
 
-namespace Stoppuhr
+namespace StopClock
 {
     public static class DataHandler
     {
         public static string GetOverviewFolderPathFromUserSettings()
         {
-            return Properties.Settings.Default.Speicherpfad;
+            return StopClock.Properties.Settings.Default.Speicherpfad;
         }
 
         public static void SetOverViewFolderPath(string path)
         {
-            Properties.Settings.Default.Speicherpfad = path;
-            Properties.Settings.Default.Save();
+            StopClock.Properties.Settings.Default.Speicherpfad = path;
+            StopClock.Properties.Settings.Default.Save();
         }
 
         public static void HandleDataset(DataSet dataset)

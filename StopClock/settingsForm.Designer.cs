@@ -1,4 +1,4 @@
-﻿namespace Stoppuhr
+﻿namespace StopClock
 {
     partial class SettingsForm
     {

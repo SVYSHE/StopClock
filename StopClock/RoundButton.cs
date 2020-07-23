@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Diagnostics;
 
-namespace Stoppuhr
+namespace StopClock
 {
     class RoundButton : Button
     {

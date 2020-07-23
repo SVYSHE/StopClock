@@ -1,4 +1,4 @@
-﻿namespace Stoppuhr
+﻿namespace StopClock
 {
     partial class MainForm
     {
@@ -41,10 +41,10 @@
             this.lblSeperator1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSettings = new System.Windows.Forms.Button();
-            this.timeButton = new Stoppuhr.RoundButton();
-            this.closeButton = new Stoppuhr.CloseButton();
-            this.maxButton = new Stoppuhr.MaximizeButton();
-            this.minButton = new Stoppuhr.MinimizeButton();
+            this.timeButton = new StopClock.RoundButton();
+            this.closeButton = new StopClock.CloseButton();
+            this.maxButton = new StopClock.MaximizeButton();
+            this.minButton = new StopClock.MinimizeButton();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,7 +157,7 @@
             // buttonSettings
             // 
             this.buttonSettings.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSettings.BackgroundImage = global::Stoppuhr.Properties.Resources.Settings;
+            this.buttonSettings.BackgroundImage = global::StopClock.Properties.Resources.Settings;
             this.buttonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSettings.FlatAppearance.BorderSize = 0;
             this.buttonSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -213,7 +213,7 @@
             this.maxButton.ClickColor = System.Drawing.Color.Black;
             this.maxButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.maxButton.ForeColor = System.Drawing.Color.White;
-            this.maxButton.formState = Stoppuhr.MaximizeButton.CustomFormState.Normal;
+            this.maxButton.formState = StopClock.MaximizeButton.CustomFormState.Normal;
             this.maxButton.HoverColor = System.Drawing.Color.LightGray;
             this.maxButton.Location = new System.Drawing.Point(240, 0);
             this.maxButton.Name = "maxButton";

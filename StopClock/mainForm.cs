@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Stoppuhr
+namespace StopClock
 {
     public partial class MainForm : Form
     {
